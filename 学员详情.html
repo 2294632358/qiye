@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.3.1.js"></script>
+</head>
+<style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    	list-style: none;
+    }
+    html,body{
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+    a{
+    	text-decoration: none;
+    }
+	ul{
+		width: 800px;
+		height: 370px;
+		/* background-color: red; */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+
+
+
+	}
+	li{
+		width: 260px;
+		height: 180px;
+		background-color: pink;
+		cursor: pointer;
+	}
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.mask{
+		width: 800px;
+		height: 280px;
+		position: absolute;
+		top: 0;
+		bottom: 0px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		/* position: relative; */
+		box-shadow: 0 0 10px  3000px rgba(0, 0, 0, 0.6);
+		transform: scale(0);
+	}
+	.mask img{
+		width: 600px;
+		height: 400px;
+		margin:0 auto;
+		/* margin-top: 5px;
+		text-align: center; */
+
+	}
+	a{
+		display: block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: white;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		color: #333;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-right: auto;
+	}
+	.btnR{
+		right: 0;
+	}
+	.hot{
+		transform: scale(1);
+	}
+</style>
+<body>
+  <ul>
+  	<li><img src="img/wd1.jpg" alt=""></li>
+  	<li><img src="img/wd2.jpg" alt=""></li>
+  	<li><img src="img/1.png" alt=""></li>
+  	<li><img src="img/w4.jpg" alt=""></li>
+  	<li><img src="img/w1.jpg" alt=""></li>
+  	<li><img src="img/w2.jpg" alt=""></li>
+  </ul>
+  <div class="mask">
+  	<img src="" alt="">
+  	<a href="javascript:;" class="btnL">&lt;</a>
+  	<a href="javascript:;" class="btnR">&gt;</a>
+  </div>
+	
+</body>
+</html>
+<script>
+	$(function(){
+		let lis=$("li");
+		lis.click(function(){
+			let i=$(this).index();
+			$(".mask").addClass("hot");
+			let imgSrc=$(this).children("img").attr("src");
+			$(".mask").children("img").attr("src",imgSrc);
+			$(".btnR").click(function(e){
+				e.stopPropagation();
+				i++;
+				if(i==lis.length){
+					i=0;
+				}
+
+
+				let value=lis.eq(i).children("img").attr("src");
+				$(".mask").children("img").attr("src",value);
+
+			})
+			$(".btnL").click(function(e){
+				e.stopPropagation();
+				i--;
+				if(i==-1){
+					i=lis.length-1;
+				}
+				let value=lis.eq(i).children("img").attr("src");
+				$(".mask").children('img').attr("src",value);
+			})
+		})
+
+		$(".mask").click(function(){
+			$(".mask").removeClass("hot");
+		})
+	})
+</script>

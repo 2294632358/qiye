@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1,user-scalable=no" >
+	<title>sy</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/首页.css">
+	<link rel="stylesheet" href="swiper-4.3.5.min.css">
+	 <link rel="stylesheet" href="https://at.alicdn.com/t/font_795508_n65vdiuv56r.css">
+   
+    <script src="swiper-4.3.5.min.js"></script>
+    <script src="animate.js"></script>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+    <nav>
+		<div class="container">
+			<div class="con">
+				<h4>舞蹈培训</h4> 
+				<div class="list">
+					<!-- <a href=""  class="list-icon">个人资料</a> -->
+					<a href="首页.html">首页</a>
+					<a href="班级.html">班级设置</a>  
+					<a href="师资.html" >师资团队</a>
+					<a href="关于我们.html" >关于我们</a>
+					<a href="在线报名.html">在线报名</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+
+    <header>
+        <div class="cover">
+            <div class="yc">舞蹈培训</div>
+            <div class="xl">
+                <ul>
+                    <a href="首页.html"><li>首页</li></a>
+                    <a href="班级.html"><li>班级设置</li></a>
+                    <a href="师资.html"><li>师资团队</li></a>
+                    <a href="关于我们.html"><li>关于我们</li></a>
+                    <a href="在线报名.html"><li>在线报名</li></a>
+                   <!--  <a href="联系我们.html"><li>联系我们</li></a>
+                    <a href="旅游签证.html"><li>旅游签证</li></a> -->
+                </ul>
+            </div>
+            <div class="pad">
+                <!-- <img src="img/logo.png" alt=""> -->
+                <div class="mid">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                         <li><a href="班级.html">班级设置</a></li>
+                     <li><a href="师资.html">师资团队</a></li>
+                        <li><a href="关于我们.html">关于我们</a></li>
+                        <li><a href="在线报名.html">在线报名</a></li>
+                        <!-- <li><a href="联系我们.html">联系我们</a></li>
+                        <li><a href="旅游签证.html">旅游签证</a></li> -->
+                    </ul>
+                </div>
+                <div class="rig">
+                    <ul>
+                        <li class="pic1"></li>
+                        <li><a href="error.html">注册</a></li>
+                        <li class="pic2"></li>
+                        <li><a href="登录.html">登录</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <div class="fox"><img src="img/sy1.png" alt=""></div>
+            </div>
+            <div class="box">AFFORDABLE PARIS TOURS</div>
+            <div class="box1">CITY TOURS / TOUR TICKETS / TOUR GUIDES</div>
+            <div class="box2">
+                <a href="班级.html"><div class="box3">VIEW TOURS</div></a>
+            </div>
+        </div>
+
+    </header>
+    <script>
+    let xl=$("header .cover .xl");
+    let dj=$("header .cover .yc");
+    dj.click(function(){
+        xl.slideToggle(500);
+       let cur=$(this).text();
+        if(cur){
+            $(this).text(cur === '首页' ? '关闭' : '首页');
+        }
+    })
+    </script>
+
+
+
+
+
+	<div class="jj">
+		<div class="top">激励话语</div>
+		<div class="nr"><p>在这个世界上，没有两个完全一样的生命，每个生命都是唯一的，不可复制的，让自己的生命绽放出最灿烂的光辉。<br>
+		             舞蹈老师说：把杆上的疼痛是种享受，累死在把杆上比累死在书桌上来得痛快！<br>痛并快乐着，要学会享受这种痛苦，觉得越痛离梦想就越近，想想值了也就忍过去了！<br>跳舞就是用身体说话！有什么痛，用身体大声喊！耐心点，坚强点；总有一天，你承受过的疼痛会有助于你</p></div>
+	</div>
+	 <!--  班级设置开始 -->
+  <div class="por">
+    <div class="container">
+      <div class="title">班级设置</div>
+      <ul class="row">
+        <li class="col-xs-12 col-sm-6 col-md-4">
+          <div class="nk">
+            <div class="white"></div>
+            <h3>特色幼儿班</h3>
+            <h4>招收3~5岁儿童</h4>
+          </div>
+        </li>
+        <li class="col-xs-12 col-sm-6 col-md-4">
+          <div class="nk">
+            <div class="white"></div>
+            <h3>青少年成长班</h3>
+            <h4>招收3~5岁儿童</h4>
+          </div>
+        </li>
+        <li class="col-xs-12 col-sm-6 col-md-4">
+          <div class="nk">
+            <div class="white"></div>
+            <h3>成人兴趣班</h3>
+            <h4>招收3~5岁儿童</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<!-- 班级设置结束 -->
+     
+     <div class="back">
+        <h5>踏着优雅的步伐前行</h5>
+        <h6>CITY TOURS / TOUR TICKETS / TOUR GUIDES</h6>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+	<div class="lp">
+	  <div class="container">
+		<div class="top">教师团队</div>
+		<ul class="row">
+			<li class="col-xs-10 col-xs-offset-1 col-md-4">
+			    <img src="img/js1.jpg" alt="班级.html">
+			    <p>特色幼儿班<br>招收3~5岁儿童</p>
+			</li>
+			
+			<li class="col-xs-10 col-xs-offset-1 col-md-4">
+			    <img src="img/js3.jpg" alt="">
+			    <p>青年成长班<br>招收10~16岁青少年</p>
+			</li>
+			
+			<li class="col-xs-10 col-xs-offset-1 col-md-4">
+			    <img src="img/js4.jpg" alt="">
+			   <p>成人兴趣班<br>招收18岁以上</p>
+			</li>
+		  </ul>
+	    </div>
+    </div>
+
+
+    <div class="contact">
+		<div class="container">
+			<div class="title">欢迎加入</div>
+			<div class="sec">
+				<input type="text" placeholder="您的姓名">
+				<input type="text" placeholder="您的年龄">
+				<input type="text" placeholder="您的联系方式">
+				<input type="submit" class="sub">
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>版权所有 ©2017   苏ICP备1230012300号</p>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</footer>
+</body>
+</html>
